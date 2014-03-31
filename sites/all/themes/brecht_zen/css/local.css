@@ -33,7 +33,12 @@ a:focus
 }
 
 */
-@media all and (min-width: 480px) and (max-width: 960px)
+
+.block__title {
+	display: none;
+}
+
+
 
 img, 
 img.scale-with-grid { 

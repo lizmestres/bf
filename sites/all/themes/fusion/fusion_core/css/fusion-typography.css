@@ -5,7 +5,7 @@
 /* Base Settings
 -------------------------------------------------------------- */
 body {
-  font-family: Futura Bk BT, Kabel Bk BT, HelveticaLight, Helvetica, Arial, Verdana, "Bitstream Vera Sans", sans-serif;     /* web safe fonts */
+  font-family: Arial, Helvetica, Verdana, "Bitstream Vera Sans", sans-serif;     /* web safe fonts */
   font-size: 81.25%;   /* also set in fusion_core.info: settings[theme_font_size] = font-size-13 */
   line-height: 150%;   /* 1.5x vertical rhythm */
 }
