@@ -28,12 +28,76 @@ img.scale-with-grid {
 .header-top {
 padding-top: 1%;}
 
-#logo {
-	float: left;
-}
 
 #block-search-form {
 	float: right;
 	text-align: right;
 
+}
+
+  #block-block-1 {
+	float: left;
+	width: 33%;
+
+}
+
+
+	
+
+
+/* TYPOGRAPHY */
+
+/* HTML Elements
+-------------------------------------------------------------- */
+h1 {
+  font-size: 180%;
+}
+
+h2 {
+  font-size: 142.85%;
+}
+
+h3 {
+  font-size: 114.28%;
+}
+
+h4 {
+  font-size: 100%;
+}
+
+h5 {
+  font-size: 90%;
+}
+
+h6 {
+  font-size: 80%;
+}
+
+#footer {
+  font-size: 95%;
+}
+
+h1.title {
+	text-transform: uppercase;
+	font-size: 4.3em;
+	text-decoration: none;
+	color: black;
+}
+
+h2.block-title {
+	display: none;
+}
+
+
+h2 a,
+h2 a:hover,
+h2 a:focus,
+h2 a:active,
+h2 a:link,
+h2
+{
+	text-transform: uppercase;
+	font-size: 2.1em;
+	text-decoration: none;
+	color: black;
 }

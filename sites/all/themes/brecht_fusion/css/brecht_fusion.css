@@ -2,7 +2,7 @@
 /* Basic Typography & Colors
 -------------------------------------------------------------- */
 /* Add general site styling here for typography and background */
-body {
+body {font-family: Futura Bk BT, Kabel Bk BT, HelveticaLight, Helvetica, Arial, Verdana, "Bitstream Vera Sans", sans-serif;
   font-size: 75%;   /* also set in fusion_starter.info: settings[base-font-size] = font-size-12 */
 }
 
