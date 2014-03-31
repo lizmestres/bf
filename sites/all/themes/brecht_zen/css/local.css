@@ -34,9 +34,7 @@ a:focus
 
 */
 
-.block__title {
-	display: none;
-}
+
 
 
 
@@ -63,7 +61,8 @@ padding-top: 1%;}
 
   #block-block-1 {
 	float: left;
-	width: 39%;
+	width: 28%;
+	margin-top: 3%;
 
 }
 
@@ -104,4 +103,8 @@ h2.node__title
 	font-size: 2.1em;
 	text-decoration: none;
 	color: black;
+}
+
+h2.block__title {
+	display: none;
 }

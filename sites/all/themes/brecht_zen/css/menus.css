@@ -12,6 +12,7 @@
 	
 }*/
 
+
 #block-system-main-menu {
 	display: inline;
 	margin-left: -7%;
@@ -19,7 +20,13 @@
 }
 
 
-
+#main-menu,
+#main-menu ul.menu li a:link,
+ #main-menu ul.menu li a:visited,
+ #main-menu ul.menu li {
+ 	display: none;
+ }
+ 
  #block-system-main-menu ul.menu li a:link,
  #block-system-main-menu ul.menu li a:visited,
  #block-system-main-menu ul.menu li
@@ -54,9 +61,16 @@
   #block-system-main-menu ul.menu li  a:hover {	background: #000000;
 	color: #ffffff;
 		}
+#block-search-form {
+	margin-top: 10px;
+}
+
+#secondary-menu {
+	display: none;
+}
 
 /* begin side menus */
-
+#block-system-user-menu ul,
 #block-system-navigation ul,
 #block-menu-menu-virtual ul,
 #block-menu-menu-classrooms ul,
@@ -85,6 +99,7 @@
 	margin-top: 15px;
 }
 
+#block-system-user-menu li,
 #block-system-navigation li,
 #block-menu-menu-virtual li,
 #block-menu-menu-classrooms li,
@@ -104,6 +119,7 @@
 
 }
 
+#block-system-user-menu li a,
 #block-system-navigation li a,
 #block-menu-menu-virtual li a,
 #block-menu-menu-classrooms li a,
@@ -131,6 +147,7 @@
 	 margin-right: 10px;
 }
 
+#block-system-user-menu li a:hover
 #block-system-navigation li a:hover,
 #block-menu-menu-virtual li a:hover,
 #block-menu-menu-donate li a:hover,
