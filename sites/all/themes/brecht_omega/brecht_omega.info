@@ -10,9 +10,12 @@ stylesheets[all][] = css/brecht_omega.normalize.css
 stylesheets[all][] = css/brecht_omega.hacks.css
 stylesheets[all][] = css/brecht_omega.styles.css
 stylesheets[all][] = css/brecht_omega.no-query.css
+stylesheets[all][] = css/local.css
+stylesheets[all][] = css/menus.css
+stylesheets[all][] = css/simple.layout.css
 
 ; Regions
-regions[branding]       = Branding
+;regions[branding]       = Branding
 regions[navigation]     = Navigation bar
 regions[header]         = Header
 regions[hero]           = Hero

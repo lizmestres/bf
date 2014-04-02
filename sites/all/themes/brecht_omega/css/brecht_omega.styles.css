@@ -152,16 +152,16 @@ tr.even {
  * $BASE-TYPOGRAPHY
  */
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Futura Bk BT, Kabel Bk BT, HelveticaLight, Helvetica, Arial, Verdana, "Bitstream Vera Sans", sans-serif;  
   color: #222222;
 }
-* html {
+html {
   font-size: 87.5%;
 }
-html {
+/*html {
   font-size: 14px;
   line-height: 1.42857em;
-}
+}*/
 
 /**
  * $LINKS
@@ -196,7 +196,7 @@ h6, .zeta {
   padding-bottom: 0em;
   margin-bottom: 0.28571em;
   color: #464a4e;
-  font-family: "Maven Pro", Helvetica, Arial, sans-serif;
+  font-family: Futura Bk BT, Kabel Bk BT, HelveticaLight, Helvetica, Arial, Verdana, "Bitstream Vera Sans", sans-serif;
   text-transform: uppercase;
 }
 h1 a,

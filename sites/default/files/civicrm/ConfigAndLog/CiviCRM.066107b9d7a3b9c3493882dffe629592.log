@@ -1,0 +1,2160 @@
+Apr 01 19:49:51  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(770): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1058): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1011): _civicrm_api3_basic_create_fallback("CRM_Contact_BAO_DashboardContact", (Array:6))
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/DashboardContact.php(60): _civicrm_api3_basic_create("CRM_Contact_BAO_DashboardContact", (Array:6))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(87): civicrm_api3_dashboard_contact_create((Array:6))
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(270): civicrm_api("dashboard_contact", "create", (Array:6))
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(145): civicrm_api3("dashboard_contact", "create", (Array:5))
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(117): CRM_Core_BAO_Dashboard::initializeDashlets(FALSE)
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php(888): CRM_Core_BAO_Dashboard::getContactDashlets()
+#20 [internal function](): CRM_Contact_Page_AJAX::dashboard((Array:3))
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(289): call_user_func((Array:2), (Array:3))
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:12))
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#24 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#25 [internal function](): civicrm_invoke("ajax", "dashboard")
+#26 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#27 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#28 {main}
+
+
+Apr 01 19:49:51  [info] $Fatal Error Details = Array
+(
+    [message] => contact_id is not valid : 2
+    [code] => 
+    [exception] => CiviCRM_API3_Exception Object
+        (
+            [extraParams:CiviCRM_API3_Exception:private] => Array
+                (
+                    [error_code] => constraint violation
+                    [sql] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                    [tip] => add debug=1 to your API call to have more info about the error
+                    [is_error] => 1
+                    [error_message] => contact_id is not valid : 2
+                    [debug_information] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                )
+
+            [message:protected] => contact_id is not valid : 2
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php
+            [line:protected] => 272
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 145
+                            [function] => civicrm_api3
+                            [args] => Array
+                                (
+                                    [0] => dashboard_contact
+                                    [1] => create
+                                    [2] => Array
+                                        (
+                                            [dashboard_id] => 1
+                                            [is_active] => 1
+                                            [column_no] => 1
+                                            [contact_id] => 2
+                                            [domain_id] => 1
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 117
+                            [function] => initializeDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php
+                            [line] => 888
+                            [function] => getContactDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [function] => dashboard
+                            [class] => CRM_Contact_Page_AJAX
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 289
+                            [function] => call_user_func
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => CRM_Contact_Page_AJAX
+                                            [1] => dashboard
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 72
+                            [function] => runItem
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id] => 165
+                                            [domain_id] => 1
+                                            [path] => civicrm/ajax/dashboard
+                                            [access_callback] => Array
+                                                (
+                                                    [0] => CRM_Core_Permission
+                                                    [1] => checkMenu
+                                                )
+
+                                            [access_arguments] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [0] => access CiviCRM
+                                                        )
+
+                                                    [1] => and
+                                                )
+
+                                            [page_callback] => Array
+                                                (
+                                                    [0] => CRM_Contact_Page_AJAX
+                                                    [1] => dashboard
+                                                )
+
+                                            [breadcrumb] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [title] => CiviCRM
+                                                            [url] => /brechtforum.org/civicrm?reset=1
+                                                        )
+
+                                                )
+
+                                            [is_ssl] => 0
+                                            [weight] => 1
+                                            [type] => 1
+                                            [page_type] => 3
+                                            [page_arguments] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 52
+                            [function] => _invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module
+                            [line] => 456
+                            [function] => invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [function] => civicrm_invoke
+                            [args] => Array
+                                (
+                                    [0] => ajax
+                                    [1] => dashboard
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc
+                            [line] => 517
+                            [function] => call_user_func_array
+                            [args] => Array
+                                (
+                                    [0] => civicrm_invoke
+                                    [1] => Array
+                                        (
+                                            [0] => ajax
+                                            [1] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [10] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php
+                            [line] => 21
+                            [function] => menu_execute_active_handler
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+
+
+Apr 01 19:49:51  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(391): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(105): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#4 [internal function](): civicrm_invoke("ajax", "dashboard")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#7 {main}
+
+
+Apr 01 20:23:03  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(770): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1058): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1011): _civicrm_api3_basic_create_fallback("CRM_Contact_BAO_DashboardContact", (Array:6))
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/DashboardContact.php(60): _civicrm_api3_basic_create("CRM_Contact_BAO_DashboardContact", (Array:6))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(87): civicrm_api3_dashboard_contact_create((Array:6))
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(270): civicrm_api("dashboard_contact", "create", (Array:6))
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(145): civicrm_api3("dashboard_contact", "create", (Array:5))
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(117): CRM_Core_BAO_Dashboard::initializeDashlets(FALSE)
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php(888): CRM_Core_BAO_Dashboard::getContactDashlets()
+#20 [internal function](): CRM_Contact_Page_AJAX::dashboard((Array:3))
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(289): call_user_func((Array:2), (Array:3))
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:12))
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#24 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#25 [internal function](): civicrm_invoke("ajax", "dashboard")
+#26 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#27 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#28 {main}
+
+
+Apr 01 20:23:03  [info] $Fatal Error Details = Array
+(
+    [message] => contact_id is not valid : 2
+    [code] => 
+    [exception] => CiviCRM_API3_Exception Object
+        (
+            [extraParams:CiviCRM_API3_Exception:private] => Array
+                (
+                    [error_code] => constraint violation
+                    [sql] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                    [tip] => add debug=1 to your API call to have more info about the error
+                    [is_error] => 1
+                    [error_message] => contact_id is not valid : 2
+                    [debug_information] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                )
+
+            [message:protected] => contact_id is not valid : 2
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php
+            [line:protected] => 272
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 145
+                            [function] => civicrm_api3
+                            [args] => Array
+                                (
+                                    [0] => dashboard_contact
+                                    [1] => create
+                                    [2] => Array
+                                        (
+                                            [dashboard_id] => 1
+                                            [is_active] => 1
+                                            [column_no] => 1
+                                            [contact_id] => 2
+                                            [domain_id] => 1
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 117
+                            [function] => initializeDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php
+                            [line] => 888
+                            [function] => getContactDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [function] => dashboard
+                            [class] => CRM_Contact_Page_AJAX
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 289
+                            [function] => call_user_func
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => CRM_Contact_Page_AJAX
+                                            [1] => dashboard
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 72
+                            [function] => runItem
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id] => 210
+                                            [domain_id] => 1
+                                            [path] => civicrm/ajax/dashboard
+                                            [access_callback] => Array
+                                                (
+                                                    [0] => CRM_Core_Permission
+                                                    [1] => checkMenu
+                                                )
+
+                                            [access_arguments] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [0] => access CiviCRM
+                                                        )
+
+                                                    [1] => and
+                                                )
+
+                                            [page_callback] => Array
+                                                (
+                                                    [0] => CRM_Contact_Page_AJAX
+                                                    [1] => dashboard
+                                                )
+
+                                            [breadcrumb] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [title] => CiviCRM
+                                                            [url] => /civicrm?reset=1
+                                                        )
+
+                                                )
+
+                                            [is_ssl] => 0
+                                            [weight] => 1
+                                            [type] => 1
+                                            [page_type] => 3
+                                            [page_arguments] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 52
+                            [function] => _invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module
+                            [line] => 456
+                            [function] => invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [function] => civicrm_invoke
+                            [args] => Array
+                                (
+                                    [0] => ajax
+                                    [1] => dashboard
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc
+                            [line] => 517
+                            [function] => call_user_func_array
+                            [args] => Array
+                                (
+                                    [0] => civicrm_invoke
+                                    [1] => Array
+                                        (
+                                            [0] => ajax
+                                            [1] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [10] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php
+                            [line] => 21
+                            [function] => menu_execute_active_handler
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+
+
+Apr 01 20:23:03  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(391): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(105): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#4 [internal function](): civicrm_invoke("ajax", "dashboard")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#7 {main}
+
+
+Apr 01 21:07:13  [info] $Fatal Error Details = Array
+(
+    [message] => 
+    [code] => 
+)
+
+
+Apr 01 21:07:13  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(322): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Domain.php(82): CRM_Core_Error::fatal()
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/DashBoard.php(106): CRM_Core_BAO_Domain::getDomain()
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(323): CRM_Contact_Page_DashBoard->run((Array:2), NULL)
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:13))
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:2))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:2))
+#7 [internal function](): civicrm_invoke("dashboard")
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:1))
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#10 {main}
+
+
+Apr 01 21:16:15  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(770): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1058): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1011): _civicrm_api3_basic_create_fallback("CRM_Contact_BAO_DashboardContact", (Array:6))
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/DashboardContact.php(60): _civicrm_api3_basic_create("CRM_Contact_BAO_DashboardContact", (Array:6))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(87): civicrm_api3_dashboard_contact_create((Array:6))
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(270): civicrm_api("dashboard_contact", "create", (Array:6))
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(145): civicrm_api3("dashboard_contact", "create", (Array:5))
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(117): CRM_Core_BAO_Dashboard::initializeDashlets(FALSE)
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php(888): CRM_Core_BAO_Dashboard::getContactDashlets()
+#20 [internal function](): CRM_Contact_Page_AJAX::dashboard((Array:3))
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(289): call_user_func((Array:2), (Array:3))
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:12))
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#24 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#25 [internal function](): civicrm_invoke("ajax", "dashboard")
+#26 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#27 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#28 {main}
+
+
+Apr 01 21:16:15  [info] $Fatal Error Details = Array
+(
+    [message] => contact_id is not valid : 2
+    [code] => 
+    [exception] => CiviCRM_API3_Exception Object
+        (
+            [extraParams:CiviCRM_API3_Exception:private] => Array
+                (
+                    [error_code] => constraint violation
+                    [sql] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                    [tip] => add debug=1 to your API call to have more info about the error
+                    [is_error] => 1
+                    [error_message] => contact_id is not valid : 2
+                    [debug_information] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                )
+
+            [message:protected] => contact_id is not valid : 2
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php
+            [line:protected] => 272
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 145
+                            [function] => civicrm_api3
+                            [args] => Array
+                                (
+                                    [0] => dashboard_contact
+                                    [1] => create
+                                    [2] => Array
+                                        (
+                                            [dashboard_id] => 1
+                                            [is_active] => 1
+                                            [column_no] => 1
+                                            [contact_id] => 2
+                                            [domain_id] => 1
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 117
+                            [function] => initializeDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php
+                            [line] => 888
+                            [function] => getContactDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [function] => dashboard
+                            [class] => CRM_Contact_Page_AJAX
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 289
+                            [function] => call_user_func
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => CRM_Contact_Page_AJAX
+                                            [1] => dashboard
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 72
+                            [function] => runItem
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id] => 165
+                                            [domain_id] => 1
+                                            [path] => civicrm/ajax/dashboard
+                                            [access_callback] => Array
+                                                (
+                                                    [0] => CRM_Core_Permission
+                                                    [1] => checkMenu
+                                                )
+
+                                            [access_arguments] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [0] => access CiviCRM
+                                                        )
+
+                                                    [1] => and
+                                                )
+
+                                            [page_callback] => Array
+                                                (
+                                                    [0] => CRM_Contact_Page_AJAX
+                                                    [1] => dashboard
+                                                )
+
+                                            [breadcrumb] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [title] => CiviCRM
+                                                            [url] => /brechtforum.org/civicrm?reset=1
+                                                        )
+
+                                                )
+
+                                            [is_ssl] => 0
+                                            [weight] => 1
+                                            [type] => 1
+                                            [page_type] => 3
+                                            [page_arguments] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 52
+                            [function] => _invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module
+                            [line] => 456
+                            [function] => invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [function] => civicrm_invoke
+                            [args] => Array
+                                (
+                                    [0] => ajax
+                                    [1] => dashboard
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc
+                            [line] => 517
+                            [function] => call_user_func_array
+                            [args] => Array
+                                (
+                                    [0] => civicrm_invoke
+                                    [1] => Array
+                                        (
+                                            [0] => ajax
+                                            [1] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [10] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php
+                            [line] => 21
+                            [function] => menu_execute_active_handler
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+
+
+Apr 01 21:16:15  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(391): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(105): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#4 [internal function](): civicrm_invoke("ajax", "dashboard")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#7 {main}
+
+
+Apr 01 21:24:29  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(770): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1058): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1011): _civicrm_api3_basic_create_fallback("CRM_Contact_BAO_DashboardContact", (Array:6))
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/DashboardContact.php(60): _civicrm_api3_basic_create("CRM_Contact_BAO_DashboardContact", (Array:6))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(87): civicrm_api3_dashboard_contact_create((Array:6))
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(270): civicrm_api("dashboard_contact", "create", (Array:6))
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(145): civicrm_api3("dashboard_contact", "create", (Array:5))
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(117): CRM_Core_BAO_Dashboard::initializeDashlets(FALSE)
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/Dashlet.php(57): CRM_Core_BAO_Dashboard::getContactDashlets()
+#20 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(323): CRM_Contact_Page_Dashlet->run((Array:2), NULL)
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:13))
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:2))
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:2))
+#24 [internal function](): civicrm_invoke("dashlet")
+#25 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:1))
+#26 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#27 {main}
+
+
+Apr 01 21:24:29  [info] $Fatal Error Details = Array
+(
+    [message] => contact_id is not valid : 2
+    [code] => 
+    [exception] => CiviCRM_API3_Exception Object
+        (
+            [extraParams:CiviCRM_API3_Exception:private] => Array
+                (
+                    [error_code] => constraint violation
+                    [sql] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                    [tip] => add debug=1 to your API call to have more info about the error
+                    [is_error] => 1
+                    [error_message] => contact_id is not valid : 2
+                    [debug_information] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                )
+
+            [message:protected] => contact_id is not valid : 2
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php
+            [line:protected] => 272
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 145
+                            [function] => civicrm_api3
+                            [args] => Array
+                                (
+                                    [0] => dashboard_contact
+                                    [1] => create
+                                    [2] => Array
+                                        (
+                                            [dashboard_id] => 1
+                                            [is_active] => 1
+                                            [column_no] => 1
+                                            [contact_id] => 2
+                                            [domain_id] => 1
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 117
+                            [function] => initializeDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/Dashlet.php
+                            [line] => 57
+                            [function] => getContactDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 323
+                            [function] => run
+                            [class] => CRM_Contact_Page_Dashlet
+                            [type] => ->
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => dashlet
+                                        )
+
+                                    [1] => 
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 72
+                            [function] => runItem
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id] => 113
+                                            [domain_id] => 1
+                                            [path] => civicrm/dashlet
+                                            [title] => CiviCRM Dashlets
+                                            [access_callback] => Array
+                                                (
+                                                    [0] => CRM_Core_Permission
+                                                    [1] => checkMenu
+                                                )
+
+                                            [access_arguments] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [0] => access CiviCRM
+                                                        )
+
+                                                    [1] => and
+                                                )
+
+                                            [page_callback] => CRM_Contact_Page_Dashlet
+                                            [breadcrumb] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [title] => CiviCRM
+                                                            [url] => /brechtforum.org/civicrm?reset=1
+                                                        )
+
+                                                )
+
+                                            [is_ssl] => 0
+                                            [weight] => 1
+                                            [type] => 1
+                                            [page_type] => 1
+                                            [page_arguments] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 52
+                            [function] => _invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => dashlet
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module
+                            [line] => 456
+                            [function] => invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => dashlet
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [function] => civicrm_invoke
+                            [args] => Array
+                                (
+                                    [0] => dashlet
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc
+                            [line] => 517
+                            [function] => call_user_func_array
+                            [args] => Array
+                                (
+                                    [0] => civicrm_invoke
+                                    [1] => Array
+                                        (
+                                            [0] => dashlet
+                                        )
+
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php
+                            [line] => 21
+                            [function] => menu_execute_active_handler
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+
+
+Apr 01 21:24:29  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(391): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(105): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:2))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:2))
+#4 [internal function](): civicrm_invoke("dashlet")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:1))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#7 {main}
+
+
+Apr 01 21:26:00  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(770): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1058): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1011): _civicrm_api3_basic_create_fallback("CRM_Contact_BAO_DashboardContact", (Array:6))
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/DashboardContact.php(60): _civicrm_api3_basic_create("CRM_Contact_BAO_DashboardContact", (Array:6))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(87): civicrm_api3_dashboard_contact_create((Array:6))
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(270): civicrm_api("dashboard_contact", "create", (Array:6))
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(145): civicrm_api3("dashboard_contact", "create", (Array:5))
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(117): CRM_Core_BAO_Dashboard::initializeDashlets(FALSE)
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php(888): CRM_Core_BAO_Dashboard::getContactDashlets()
+#20 [internal function](): CRM_Contact_Page_AJAX::dashboard((Array:3))
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(289): call_user_func((Array:2), (Array:3))
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:12))
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#24 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#25 [internal function](): civicrm_invoke("ajax", "dashboard")
+#26 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#27 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#28 {main}
+
+
+Apr 01 21:26:01  [info] $Fatal Error Details = Array
+(
+    [message] => contact_id is not valid : 2
+    [code] => 
+    [exception] => CiviCRM_API3_Exception Object
+        (
+            [extraParams:CiviCRM_API3_Exception:private] => Array
+                (
+                    [error_code] => constraint violation
+                    [sql] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                    [tip] => add debug=1 to your API call to have more info about the error
+                    [is_error] => 1
+                    [error_message] => contact_id is not valid : 2
+                    [debug_information] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                )
+
+            [message:protected] => contact_id is not valid : 2
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php
+            [line:protected] => 272
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 145
+                            [function] => civicrm_api3
+                            [args] => Array
+                                (
+                                    [0] => dashboard_contact
+                                    [1] => create
+                                    [2] => Array
+                                        (
+                                            [dashboard_id] => 1
+                                            [is_active] => 1
+                                            [column_no] => 1
+                                            [contact_id] => 2
+                                            [domain_id] => 1
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 117
+                            [function] => initializeDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php
+                            [line] => 888
+                            [function] => getContactDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [function] => dashboard
+                            [class] => CRM_Contact_Page_AJAX
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 289
+                            [function] => call_user_func
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => CRM_Contact_Page_AJAX
+                                            [1] => dashboard
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 72
+                            [function] => runItem
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id] => 165
+                                            [domain_id] => 1
+                                            [path] => civicrm/ajax/dashboard
+                                            [access_callback] => Array
+                                                (
+                                                    [0] => CRM_Core_Permission
+                                                    [1] => checkMenu
+                                                )
+
+                                            [access_arguments] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [0] => access CiviCRM
+                                                        )
+
+                                                    [1] => and
+                                                )
+
+                                            [page_callback] => Array
+                                                (
+                                                    [0] => CRM_Contact_Page_AJAX
+                                                    [1] => dashboard
+                                                )
+
+                                            [breadcrumb] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [title] => CiviCRM
+                                                            [url] => /brechtforum.org/civicrm?reset=1
+                                                        )
+
+                                                )
+
+                                            [is_ssl] => 0
+                                            [weight] => 1
+                                            [type] => 1
+                                            [page_type] => 3
+                                            [page_arguments] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 52
+                            [function] => _invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module
+                            [line] => 456
+                            [function] => invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [function] => civicrm_invoke
+                            [args] => Array
+                                (
+                                    [0] => ajax
+                                    [1] => dashboard
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc
+                            [line] => 517
+                            [function] => call_user_func_array
+                            [args] => Array
+                                (
+                                    [0] => civicrm_invoke
+                                    [1] => Array
+                                        (
+                                            [0] => ajax
+                                            [1] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [10] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php
+                            [line] => 21
+                            [function] => menu_execute_active_handler
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+
+
+Apr 01 21:26:01  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(391): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(105): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#4 [internal function](): civicrm_invoke("ajax", "dashboard")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#7 {main}
+
+
+Apr 01 21:27:35  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -3
+    [message] => DB Error: constraint violation
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modified_date ) VALUES ('civicrm_contact' ,  1 , 'civicrm_contact,1' ,  2 ,  20140401212734 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_log`, CONSTRAINT `FK_civicrm_log_modified_id` FOREIGN KEY (`modified_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modified_date ) VALUES ('civicrm_contact' ,  1 , 'civicrm_contact,1' ,  2 ,  20140401212734 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_log`, CONSTRAINT `FK_civicrm_log_modified_id` FOREIGN KEY (`modified_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+    [to_string] => [db_error: message="DB Error: constraint violation" code=-3 mode=callback callback=CRM_Core_Error::handle prefix="" info="INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modified_date ) VALUES ('civicrm_contact' ,  1 , 'civicrm_contact,1' ,  2 ,  20140401212734 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_log`, CONSTRAINT `FK_civicrm_log_modified_id` FOREIGN KEY (`modified_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]"]
+)
+
+
+Apr 01 21:27:35  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(197): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::handle(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modi...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modi...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modi...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modi...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modi...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_log (entity_table , entity_id , data , modified_id , modi...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Log.php(119): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/BAO/Contact.php(223): CRM_Core_BAO_Log::register("1", "civicrm_contact", "1")
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Form/Domain.php(288): CRM_Contact_BAO_Contact::add((Array:7))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Form.php(261): CRM_Contact_Form_Domain->postProcess()
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/StateMachine.php(160): CRM_Core_Form->mainProcess()
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Next.php(60): CRM_Core_StateMachine->perform(Object(CRM_Contact_Form_Domain), "next", "Next")
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Next->perform(Object(CRM_Contact_Form_Domain), "next")
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Contact_Form_Domain), "next")
+#20 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Controller.php(345): HTML_QuickForm_Page->handle("next")
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(117): CRM_Core_Controller->run()
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(297): CRM_Utils_Wrapper->run("CRM_Contact_Form_Domain", "Organization Address and Contact Info", NULL)
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:14))
+#24 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#25 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#26 [internal function](): civicrm_invoke("admin", "domain")
+#27 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#28 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#29 {main}
+
+
+Apr 01 21:28:00  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(770): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1058): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1011): _civicrm_api3_basic_create_fallback("CRM_Contact_BAO_DashboardContact", (Array:6))
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/DashboardContact.php(60): _civicrm_api3_basic_create("CRM_Contact_BAO_DashboardContact", (Array:6))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(87): civicrm_api3_dashboard_contact_create((Array:6))
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(270): civicrm_api("dashboard_contact", "create", (Array:6))
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(145): civicrm_api3("dashboard_contact", "create", (Array:5))
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(117): CRM_Core_BAO_Dashboard::initializeDashlets(FALSE)
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php(888): CRM_Core_BAO_Dashboard::getContactDashlets()
+#20 [internal function](): CRM_Contact_Page_AJAX::dashboard((Array:3))
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(289): call_user_func((Array:2), (Array:3))
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:12))
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#24 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#25 [internal function](): civicrm_invoke("ajax", "dashboard")
+#26 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#27 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#28 {main}
+
+
+Apr 01 21:28:00  [info] $Fatal Error Details = Array
+(
+    [message] => contact_id is not valid : 2
+    [code] => 
+    [exception] => CiviCRM_API3_Exception Object
+        (
+            [extraParams:CiviCRM_API3_Exception:private] => Array
+                (
+                    [error_code] => constraint violation
+                    [sql] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                    [tip] => add debug=1 to your API call to have more info about the error
+                    [is_error] => 1
+                    [error_message] => contact_id is not valid : 2
+                    [debug_information] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                )
+
+            [message:protected] => contact_id is not valid : 2
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php
+            [line:protected] => 272
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 145
+                            [function] => civicrm_api3
+                            [args] => Array
+                                (
+                                    [0] => dashboard_contact
+                                    [1] => create
+                                    [2] => Array
+                                        (
+                                            [dashboard_id] => 1
+                                            [is_active] => 1
+                                            [column_no] => 1
+                                            [contact_id] => 2
+                                            [domain_id] => 1
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 117
+                            [function] => initializeDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php
+                            [line] => 888
+                            [function] => getContactDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [function] => dashboard
+                            [class] => CRM_Contact_Page_AJAX
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 289
+                            [function] => call_user_func
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => CRM_Contact_Page_AJAX
+                                            [1] => dashboard
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 72
+                            [function] => runItem
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id] => 165
+                                            [domain_id] => 1
+                                            [path] => civicrm/ajax/dashboard
+                                            [access_callback] => Array
+                                                (
+                                                    [0] => CRM_Core_Permission
+                                                    [1] => checkMenu
+                                                )
+
+                                            [access_arguments] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [0] => access CiviCRM
+                                                        )
+
+                                                    [1] => and
+                                                )
+
+                                            [page_callback] => Array
+                                                (
+                                                    [0] => CRM_Contact_Page_AJAX
+                                                    [1] => dashboard
+                                                )
+
+                                            [breadcrumb] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [title] => CiviCRM
+                                                            [url] => /brechtforum.org/civicrm?reset=1
+                                                        )
+
+                                                )
+
+                                            [is_ssl] => 0
+                                            [weight] => 1
+                                            [type] => 1
+                                            [page_type] => 3
+                                            [page_arguments] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 52
+                            [function] => _invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module
+                            [line] => 456
+                            [function] => invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [function] => civicrm_invoke
+                            [args] => Array
+                                (
+                                    [0] => ajax
+                                    [1] => dashboard
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc
+                            [line] => 517
+                            [function] => call_user_func_array
+                            [args] => Array
+                                (
+                                    [0] => civicrm_invoke
+                                    [1] => Array
+                                        (
+                                            [0] => ajax
+                                            [1] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [10] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php
+                            [line] => 21
+                            [function] => menu_execute_active_handler
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+
+
+Apr 01 21:28:00  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(391): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(105): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#4 [internal function](): civicrm_invoke("ajax", "dashboard")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#7 {main}
+
+
+Apr 01 21:28:34  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(770): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: constraint violation", -3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-3, 16, (Array:2), "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -3, NULL, NULL, "INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...", "DB_Error", TRUE)
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(898): DB_common->raiseError(-3, NULL, NULL, NULL, "1452 ** Cannot add or update a child row: a foreign key constraint fails (`br...")
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/mysql.php(327): DB_mysql->mysqlRaiseError()
+#8 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysql->simpleQuery("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(2421): DB_common->query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/packages/DB/DataObject.php(1055): DB_DataObject->_query("INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no ...")
+#11 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/DAO.php(277): DB_DataObject->insert()
+#12 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1058): CRM_Core_DAO->save()
+#13 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/utils.php(1011): _civicrm_api3_basic_create_fallback("CRM_Contact_BAO_DashboardContact", (Array:6))
+#14 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/v3/DashboardContact.php(60): _civicrm_api3_basic_create("CRM_Contact_BAO_DashboardContact", (Array:6))
+#15 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(87): civicrm_api3_dashboard_contact_create((Array:6))
+#16 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php(270): civicrm_api("dashboard_contact", "create", (Array:6))
+#17 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(145): civicrm_api3("dashboard_contact", "create", (Array:5))
+#18 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php(117): CRM_Core_BAO_Dashboard::initializeDashlets(FALSE)
+#19 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php(888): CRM_Core_BAO_Dashboard::getContactDashlets()
+#20 [internal function](): CRM_Contact_Page_AJAX::dashboard((Array:3))
+#21 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(289): call_user_func((Array:2), (Array:3))
+#22 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:12))
+#23 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#24 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#25 [internal function](): civicrm_invoke("ajax", "dashboard")
+#26 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#27 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#28 {main}
+
+
+Apr 01 21:28:34  [info] $Fatal Error Details = Array
+(
+    [message] => contact_id is not valid : 2
+    [code] => 
+    [exception] => CiviCRM_API3_Exception Object
+        (
+            [extraParams:CiviCRM_API3_Exception:private] => Array
+                (
+                    [error_code] => constraint violation
+                    [sql] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                    [tip] => add debug=1 to your API call to have more info about the error
+                    [is_error] => 1
+                    [error_message] => contact_id is not valid : 2
+                    [debug_information] => INSERT INTO civicrm_dashboard_contact (dashboard_id , contact_id , column_no , is_active ) VALUES ( 1 ,  2 ,  1 ,  1 )  [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`brecht_civicrm`.`civicrm_dashboard_contact`, CONSTRAINT `FK_civicrm_dashboard_contact_contact_id` FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact` (`id`) ON DELETE CASCADE)]
+                )
+
+            [message:protected] => contact_id is not valid : 2
+            [string:Exception:private] => 
+            [code:protected] => 0
+            [file:protected] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/api/api.php
+            [line:protected] => 272
+            [trace:Exception:private] => Array
+                (
+                    [0] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 145
+                            [function] => civicrm_api3
+                            [args] => Array
+                                (
+                                    [0] => dashboard_contact
+                                    [1] => create
+                                    [2] => Array
+                                        (
+                                            [dashboard_id] => 1
+                                            [is_active] => 1
+                                            [column_no] => 1
+                                            [contact_id] => 2
+                                            [domain_id] => 1
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/BAO/Dashboard.php
+                            [line] => 117
+                            [function] => initializeDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php
+                            [line] => 888
+                            [function] => getContactDashlets
+                            [class] => CRM_Core_BAO_Dashboard
+                            [type] => ::
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [function] => dashboard
+                            [class] => CRM_Contact_Page_AJAX
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 289
+                            [function] => call_user_func
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => CRM_Contact_Page_AJAX
+                                            [1] => dashboard
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 72
+                            [function] => runItem
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id] => 165
+                                            [domain_id] => 1
+                                            [path] => civicrm/ajax/dashboard
+                                            [access_callback] => Array
+                                                (
+                                                    [0] => CRM_Core_Permission
+                                                    [1] => checkMenu
+                                                )
+
+                                            [access_arguments] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [0] => access CiviCRM
+                                                        )
+
+                                                    [1] => and
+                                                )
+
+                                            [page_callback] => Array
+                                                (
+                                                    [0] => CRM_Contact_Page_AJAX
+                                                    [1] => dashboard
+                                                )
+
+                                            [breadcrumb] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [title] => CiviCRM
+                                                            [url] => /brechtforum.org/civicrm?reset=1
+                                                        )
+
+                                                )
+
+                                            [is_ssl] => 0
+                                            [weight] => 1
+                                            [type] => 1
+                                            [page_type] => 3
+                                            [page_arguments] => 
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php
+                            [line] => 52
+                            [function] => _invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module
+                            [line] => 456
+                            [function] => invoke
+                            [class] => CRM_Core_Invoke
+                            [type] => ::
+                            [args] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => civicrm
+                                            [1] => ajax
+                                            [2] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [function] => civicrm_invoke
+                            [args] => Array
+                                (
+                                    [0] => ajax
+                                    [1] => dashboard
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc
+                            [line] => 517
+                            [function] => call_user_func_array
+                            [args] => Array
+                                (
+                                    [0] => civicrm_invoke
+                                    [1] => Array
+                                        (
+                                            [0] => ajax
+                                            [1] => dashboard
+                                        )
+
+                                )
+
+                        )
+
+                    [10] => Array
+                        (
+                            [file] => /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php
+                            [line] => 21
+                            [function] => menu_execute_active_handler
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [previous:Exception:private] => 
+        )
+
+)
+
+
+Apr 01 21:28:34  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(391): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(105): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#3 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#4 [internal function](): civicrm_invoke("ajax", "dashboard")
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#7 {main}
+
+
+Apr 01 21:31:35  [info] $Fatal Error Details = Array
+(
+    [message] =>  is not of the type Positive
+    [code] => 
+)
+
+
+Apr 01 21:31:35  [info] $backTrace = #0 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Error.php(322): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Utils/Type.php(229): CRM_Core_Error::fatal(" is not of the type Positive")
+#2 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Contact/Page/AJAX.php(892): CRM_Utils_Type::escape(NULL, "Positive")
+#3 [internal function](): CRM_Contact_Page_AJAX::dashboard((Array:3))
+#4 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(289): call_user_func((Array:2), (Array:3))
+#5 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(72): CRM_Core_Invoke::runItem((Array:12))
+#6 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#7 /Users/macowner/Dropbox/MAMP/brechtforum.org/sites/all/modules/civicrm/drupal/civicrm.module(456): CRM_Core_Invoke::invoke((Array:3))
+#8 [internal function](): civicrm_invoke("ajax", "dashboard")
+#9 /Users/macowner/Dropbox/MAMP/brechtforum.org/includes/menu.inc(517): call_user_func_array("civicrm_invoke", (Array:2))
+#10 /Users/macowner/Dropbox/MAMP/brechtforum.org/index.php(21): menu_execute_active_handler()
+#11 {main}
+
+

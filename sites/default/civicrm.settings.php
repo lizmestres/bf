@@ -168,7 +168,7 @@ define( 'CIVICRM_UF_BASEURL'      , 'http://localhost/brechtforum.org/' );
  * We recommend using a 16-32 bit alphanumeric/punctuation key.
  * More info at http://wiki.civicrm.org/confluence/display/CRMDOC/Command-line+Script+Configuration
  */
-define( 'CIVICRM_SITE_KEY', 'b878bc794152b13352663e1d5b3a13e3' );
+define( 'CIVICRM_SITE_KEY', '99dbe44b04188b338dd1b1b592553d14' );
 
 /**
  * Enable this constant, if you want to send your email through the smarty

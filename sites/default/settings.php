@@ -225,7 +225,7 @@ $databases = array (
     ),
   ),
 );
-
+/*
 $databases['default']['default']['prefix']= array(
   'civicrm_acl'                              => 'brecht_civicrm.',
   'civicrm_acl_cache'                        => 'brecht_civicrm.',
@@ -375,7 +375,7 @@ $databases['default']['default']['prefix']= array(
   'civicrm_value_title_2_16'                 => 'brecht_civicrm.',
   'civicrm_worldregion'                      => 'brecht_civicrm.',
 );
-
+*/
 
 
 /**
